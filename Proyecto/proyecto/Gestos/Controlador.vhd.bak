@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all
+
+Entity Controlador is
+	Port(
+		Resetn, clock: in std_logic;
+		start,stop, Gesto0, Gesto1, Gesto2, Gesto3, HayGestoY, HayGestoX: in std_logic;
+		led, EnMost, EnG, EnMost: out std_logic;
+		Selec: out std_logic_vector(1 downTo 0);
+		Estado: out std_logic_vector(3 downTo 0)
+	);
+end Controlador;
+

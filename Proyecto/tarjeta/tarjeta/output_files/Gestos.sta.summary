@@ -1,0 +1,85 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLOCK_DIV_10_MHz:inst9|CLOCK_100Hz'
+Slack : -14.473
+TNS   : -174.808
+
+Type  : Setup 'Reloj'
+Slack : -6.673
+TNS   : -28.122
+
+Type  : Setup 'CLOCK_DIV_10_MHz:inst9|clock_1Khz_int'
+Slack : -5.690
+TNS   : -19.267
+
+Type  : Setup 'CLOCK_DIV_10_MHz:inst9|clock_1Mhz_int'
+Slack : -4.902
+TNS   : -17.874
+
+Type  : Setup 'CLOCK_DIV_10_MHz:inst9|clock_10Khz_int'
+Slack : -4.665
+TNS   : -17.847
+
+Type  : Setup 'CLOCK_DIV_10_MHz:inst9|clock_100Khz_int'
+Slack : -4.665
+TNS   : -17.752
+
+Type  : Hold 'CLOCK_DIV_10_MHz:inst9|clock_10Khz_int'
+Slack : -4.086
+TNS   : -4.086
+
+Type  : Hold 'CLOCK_DIV_10_MHz:inst9|clock_100Khz_int'
+Slack : -1.200
+TNS   : -1.200
+
+Type  : Hold 'CLOCK_DIV_10_MHz:inst9|clock_1Mhz_int'
+Slack : -0.420
+TNS   : -0.420
+
+Type  : Hold 'CLOCK_DIV_10_MHz:inst9|CLOCK_100Hz'
+Slack : 3.104
+TNS   : 0.000
+
+Type  : Hold 'Reloj'
+Slack : 3.310
+TNS   : 0.000
+
+Type  : Hold 'CLOCK_DIV_10_MHz:inst9|clock_1Khz_int'
+Slack : 3.402
+TNS   : 0.000
+
+Type  : Recovery 'CLOCK_DIV_10_MHz:inst9|CLOCK_100Hz'
+Slack : -5.482
+TNS   : -59.086
+
+Type  : Removal 'CLOCK_DIV_10_MHz:inst9|CLOCK_100Hz'
+Slack : 5.048
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'Reloj'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'CLOCK_DIV_10_MHz:inst9|CLOCK_100Hz'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLOCK_DIV_10_MHz:inst9|clock_100Khz_int'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLOCK_DIV_10_MHz:inst9|clock_10Khz_int'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLOCK_DIV_10_MHz:inst9|clock_1Khz_int'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLOCK_DIV_10_MHz:inst9|clock_1Mhz_int'
+Slack : 0.161
+TNS   : 0.000
+
+------------------------------------------------------------

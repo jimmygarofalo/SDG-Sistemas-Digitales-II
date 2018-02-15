@@ -1,0 +1,473 @@
+TimeQuest Timing Analyzer report for Gestos
+Thu Jan 11 05:49:33 2018
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clock'
+ 12. Hold: 'clock'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; Gestos                                              ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M160ZT100C4                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 133.99 MHz ; 133.99 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Setup Summary                  ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -6.463 ; -49.355       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Hold Summary                  ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 2.046 ; 0.000         ;
++-------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------+
+; Minimum Pulse Width Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -2.289 ; -2.289        ;
++-------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clock'                                                                                                                   ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -6.463 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 7.203      ;
+; -6.463 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 7.203      ;
+; -6.279 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 7.019      ;
+; -6.279 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 7.019      ;
+; -6.130 ; Controlador:inst43|y.Ta ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 6.870      ;
+; -6.130 ; Controlador:inst43|y.Ta ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 6.870      ;
+; -6.080 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 6.820      ;
+; -5.938 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 6.678      ;
+; -5.938 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 6.678      ;
+; -5.896 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 6.636      ;
+; -5.814 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 6.554      ;
+; -5.814 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 6.554      ;
+; -5.749 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 6.489      ;
+; -5.749 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 6.489      ;
+; -5.747 ; Controlador:inst43|y.Ta ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 6.487      ;
+; -5.582 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 6.322      ;
+; -5.582 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 6.322      ;
+; -5.555 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 6.295      ;
+; -5.431 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 6.171      ;
+; -5.403 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 6.143      ;
+; -5.403 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 6.143      ;
+; -5.366 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Tc ; clock        ; clock       ; 1.000        ; 0.000      ; 6.106      ;
+; -5.366 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 6.106      ;
+; -5.348 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 6.088      ;
+; -5.348 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 6.088      ;
+; -5.225 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tc ; clock        ; clock       ; 1.000        ; 0.000      ; 5.965      ;
+; -5.199 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 5.939      ;
+; -5.182 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Tc ; clock        ; clock       ; 1.000        ; 0.000      ; 5.922      ;
+; -5.020 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 5.760      ;
+; -4.965 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 5.705      ;
+; -4.841 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Tc ; clock        ; clock       ; 1.000        ; 0.000      ; 5.581      ;
+; -4.485 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Tc ; clock        ; clock       ; 1.000        ; 0.000      ; 5.225      ;
+; -4.280 ; Controlador:inst43|y.Tf ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 1.000        ; 0.000      ; 5.020      ;
+; -4.280 ; Controlador:inst43|y.Tf ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 1.000        ; 0.000      ; 5.020      ;
+; -4.280 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Ta ; clock        ; clock       ; 1.000        ; 0.000      ; 5.020      ;
+; -4.280 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tj ; clock        ; clock       ; 1.000        ; 0.000      ; 5.020      ;
+; -4.096 ; Controlador:inst43|y.Te ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.836      ;
+; -4.096 ; Controlador:inst43|y.Te ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.836      ;
+; -3.897 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tb ; clock        ; clock       ; 1.000        ; 0.000      ; 4.637      ;
+; -3.755 ; Controlador:inst43|y.Tg ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.495      ;
+; -3.755 ; Controlador:inst43|y.Tg ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.495      ;
+; -3.557 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Th ; clock        ; clock       ; 1.000        ; 0.000      ; 4.297      ;
+; -3.557 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tg ; clock        ; clock       ; 1.000        ; 0.000      ; 4.297      ;
+; -3.399 ; Controlador:inst43|y.Th ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.139      ;
+; -3.399 ; Controlador:inst43|y.Th ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 1.000        ; 0.000      ; 4.139      ;
+; -3.271 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Tc ; clock        ; clock       ; 1.000        ; 0.000      ; 4.011      ;
+; -2.990 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Te ; clock        ; clock       ; 1.000        ; 0.000      ; 3.730      ;
+; -2.325 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Ti ; clock        ; clock       ; 1.000        ; 0.000      ; 3.065      ;
+; -2.215 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Tc ; clock        ; clock       ; 1.000        ; 0.000      ; 2.955      ;
+; -2.208 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Td ; clock        ; clock       ; 1.000        ; 0.000      ; 2.948      ;
+; -2.050 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Td ; clock        ; clock       ; 1.000        ; 0.000      ; 2.790      ;
+; -1.786 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tf ; clock        ; clock       ; 1.000        ; 0.000      ; 2.526      ;
+; -1.659 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Ti ; clock        ; clock       ; 1.000        ; 0.000      ; 2.399      ;
++--------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clock'                                                                                                                   ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 2.046 ; Controlador:inst43|y.Th ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.120      ;
+; 2.325 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Ti ; clock        ; clock       ; 0.000        ; 0.000      ; 2.399      ;
+; 2.452 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tf ; clock        ; clock       ; 0.000        ; 0.000      ; 2.526      ;
+; 2.490 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 2.564      ;
+; 2.716 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Td ; clock        ; clock       ; 0.000        ; 0.000      ; 2.790      ;
+; 2.862 ; Controlador:inst43|y.Th ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 0.000        ; 0.000      ; 2.936      ;
+; 2.864 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 2.938      ;
+; 2.874 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Td ; clock        ; clock       ; 0.000        ; 0.000      ; 2.948      ;
+; 2.881 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Tc ; clock        ; clock       ; 0.000        ; 0.000      ; 2.955      ;
+; 2.991 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Ti ; clock        ; clock       ; 0.000        ; 0.000      ; 3.065      ;
+; 3.238 ; Controlador:inst43|y.Tf ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 0.000        ; 0.000      ; 3.312      ;
+; 3.446 ; Controlador:inst43|y.Tg ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 0.000        ; 0.000      ; 3.520      ;
+; 3.508 ; Controlador:inst43|y.Ta ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 3.582      ;
+; 3.656 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Te ; clock        ; clock       ; 0.000        ; 0.000      ; 3.730      ;
+; 3.937 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Tc ; clock        ; clock       ; 0.000        ; 0.000      ; 4.011      ;
+; 4.223 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Th ; clock        ; clock       ; 0.000        ; 0.000      ; 4.297      ;
+; 4.223 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tg ; clock        ; clock       ; 0.000        ; 0.000      ; 4.297      ;
+; 4.421 ; Controlador:inst43|y.Tg ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.495      ;
+; 4.563 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 4.637      ;
+; 4.677 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 4.751      ;
+; 4.762 ; Controlador:inst43|y.Te ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.836      ;
+; 4.762 ; Controlador:inst43|y.Te ; RegSost:inst37|Q[0]     ; clock        ; clock       ; 0.000        ; 0.000      ; 4.836      ;
+; 4.946 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 5.020      ;
+; 4.946 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 5.020      ;
+; 4.946 ; Controlador:inst43|y.Tf ; RegSost:inst37|Q[1]     ; clock        ; clock       ; 0.000        ; 0.000      ; 5.020      ;
+; 5.034 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 5.108      ;
+; 5.034 ; Controlador:inst43|y.Tb ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 5.108      ;
+; 5.151 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Tc ; clock        ; clock       ; 0.000        ; 0.000      ; 5.225      ;
+; 5.507 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Tc ; clock        ; clock       ; 0.000        ; 0.000      ; 5.581      ;
+; 5.631 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 5.705      ;
+; 5.848 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Tc ; clock        ; clock       ; 0.000        ; 0.000      ; 5.922      ;
+; 5.865 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 5.939      ;
+; 5.891 ; Controlador:inst43|y.Tc ; Controlador:inst43|y.Tc ; clock        ; clock       ; 0.000        ; 0.000      ; 5.965      ;
+; 6.014 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 6.088      ;
+; 6.014 ; Controlador:inst43|y.Td ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 6.088      ;
+; 6.032 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Tc ; clock        ; clock       ; 0.000        ; 0.000      ; 6.106      ;
+; 6.032 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 6.106      ;
+; 6.221 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 6.295      ;
+; 6.248 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 6.322      ;
+; 6.248 ; Controlador:inst43|y.Th ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 6.322      ;
+; 6.415 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 6.489      ;
+; 6.415 ; Controlador:inst43|y.Tj ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 6.489      ;
+; 6.480 ; Controlador:inst43|y.Ti ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 6.554      ;
+; 6.562 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 6.636      ;
+; 6.604 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 6.678      ;
+; 6.604 ; Controlador:inst43|y.Tg ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 6.678      ;
+; 6.746 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Tb ; clock        ; clock       ; 0.000        ; 0.000      ; 6.820      ;
+; 6.796 ; Controlador:inst43|y.Ta ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 6.870      ;
+; 6.796 ; Controlador:inst43|y.Ta ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 6.870      ;
+; 6.945 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 7.019      ;
+; 6.945 ; Controlador:inst43|y.Te ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 7.019      ;
+; 7.129 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Ta ; clock        ; clock       ; 0.000        ; 0.000      ; 7.203      ;
+; 7.129 ; Controlador:inst43|y.Tf ; Controlador:inst43|y.Tj ; clock        ; clock       ; 0.000        ; 0.000      ; 7.203      ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 64       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 64       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 27    ; 27   ;
+; Unconstrained Input Port Paths  ; 130   ; 130  ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 66    ; 66   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clock  ; clock ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; Input Port      ; Comment                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; Resetn          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[7] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; stop            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[0]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[1]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[2]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[3]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[4]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[5]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[6]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[7]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[0]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[1]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[2]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[3]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[4]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[5]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[6]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[7]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Out7Seg[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; Input Port      ; Comment                                                                              ;
++-----------------+--------------------------------------------------------------------------------------+
+; Resetn          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Sensibilidad[7] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; stop            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[0]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[1]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[2]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[3]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[4]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[5]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[6]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x[7]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[0]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[1]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[2]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[3]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[4]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[5]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[6]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; y[7]            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Out7Seg[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Out7Seg[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; est[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Jan 11 05:49:30 2018
+Info: Command: quartus_sta Gestos -c Gestos
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Gestos.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -6.463
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.463             -49.355 clock 
+Info (332146): Worst-case hold slack is 2.046
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.046               0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 574 megabytes
+    Info: Processing ended: Thu Jan 11 05:49:33 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
